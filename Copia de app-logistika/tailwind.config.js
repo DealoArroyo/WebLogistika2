@@ -11,7 +11,7 @@ export default {
         'bluecard': '#CEE0E3',
         'bluelet': '#336D75',
         'bone': '#F0F3EE',
-        'greenbutton': '87AE79',
+        'greenbutton': '#87AE79',
         'greencard': '#5E7E46',
         'greenlet': '#55963F',
         'greenav': '#316470',
