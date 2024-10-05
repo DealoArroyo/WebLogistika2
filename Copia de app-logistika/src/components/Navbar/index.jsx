@@ -1,18 +1,32 @@
 import React from 'react';
 import logo from "../../assets/images/logo-logistika.webp";
-import { IoMenuSharp } from "react-icons/io5";
-
-
+import { IoMenuSharp, IoClose } from "react-icons/io5";
+import Items from './items';
+import { useState } from 'react';
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(!open)
+  }
+
+
   return (
-    <div className='w-full my-0 mx-auto bg-greenav'>
-      <div className='w-full p-3 flex justify-around md:font-bold md:text-left'>
-        <img src={logo} alt="logo" className='w-16 h-16 justify-start'/>
-        <h4 className='flex justify-center items-center text-white md:hidden'>Logistika</h4>
-        <IoMenuSharp className='text-white max-w-sm my-6 w-6 h-6 cursor-pointer' />
-      </div>
-    </div>
+    <header className='bg-greenav p-5'>
+      <nav className='flex justify-between items-center'>
+        <img src={logo} alt="logo-logistika" className='w-20 mx-0' />
+        <h1 className='mx-auto text-white'>Logistika y soluciones gastronómicas</h1>
+        <button open={open} onClick={handleClick} className='rotate-60 duration-300'>
+          {!open ? 
+            (<IoMenuSharp className='text-3xl text-white md:hidden'/>)
+             : 
+            (<IoClose className='text-3xl text-white '/>)
+          }
+        </button>
+        <Items open={open}/>
+      </nav>
+    </header>
   )
 }
 
