@@ -9,6 +9,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open)
+    
   }
 
 
@@ -21,7 +22,7 @@ const Navbar = () => {
           {!open ? 
             (<IoMenuSharp className='text-3xl text-white md:hidden'/>)
              : 
-            (<IoClose className='text-3xl text-white '/>)
+            (<IoClose className='text-3xl text-white'/>)
           }
         </button>
         <Items open={open}/>
