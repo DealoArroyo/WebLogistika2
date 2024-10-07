@@ -6,9 +6,11 @@ import Button from './button'
 const Welcome = () => {
   return (
     <main className='p-12 grid-cols-2'>
-      <Text />
-      <img src={mesa} alt="mesa-de-decoracion" className='w-4/5 mx-auto m-10 rounded-xl'/>
-      <Button />
+      <div className='md:flex md:space-x-7'>
+        <Text />
+        <img src={mesa} alt="mesa-de-decoracion" className='w-4/5 mx-auto m-10 rounded-xl md:max-w-96 lg:max-w-md'/>
+      </div>
+      <Button/>
     </main>
 
   )

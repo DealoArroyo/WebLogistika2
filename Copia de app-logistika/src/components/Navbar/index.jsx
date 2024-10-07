@@ -14,15 +14,15 @@ const Navbar = () => {
 
 
   return (
-    <header className='bg-greenav p-5'>
+    <header className='bg-greenav p-4'>
       <nav className='flex justify-between items-center'>
         <img src={logo} alt="logo-logistika" className='w-20 mx-0' />
         <h1 className='mx-auto text-white'>Logistika y soluciones gastronómicas</h1>
-        <button open={open} onClick={handleClick} className='rotate-60 duration-300'>
+        <button open={open} onClick={handleClick} className=''>
           {!open ? 
             (<IoMenuSharp className='text-3xl text-white md:hidden'/>)
              : 
-            (<IoClose className='text-3xl text-white'/>)
+            (<IoClose className='text-3xl text-white '/>)
           }
         </button>
         <Items open={open}/>
